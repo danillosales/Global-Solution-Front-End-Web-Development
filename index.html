@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="shortcut icon" href="./images/logo-navbar.png" type="image/x-icon">
+
+  <title>SmartHealth Connect</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <img alt="logo" src="./images/logo-navbar.png"/>
+          <div id="nav-menu">
+            <ul>
+              <li onclick="scrollScreen('home')">Home</li>
+              <li onclick="scrollScreen('problem_solution')">Problemas & Solução</li>
+              <li onclick="scrollScreen('demo')">Demonstração</li>
+              <li onclick="scrollScreen('contact')">Contato</li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="banner">
+            <div id="banner-left">
+              <span>
+                <img id="logo-banner" alt="logo" src="./images/logo4.png"/>
+                <h1> SmartHealth Connect</h1>
+                <p>Acompanhamento remoto e em </p>
+                <p>tempo real de seus pacientes</p>
+              </span>
+              <button class="default" onclick="scrollScreen('contact')">Avise-me</button>
+            </div>
+            <div id="banner-right">
+              <img alt="medical-team" src="./images/banner.svg">
+            </div>
+          </section>
+    
+          <section id="home">
+            <h2>Vídeo-pitch</h2>      
+            <video width="640" height="360" controls>
+              <source src="./videos/Pitch - STORYTELLING E INSPIRAÇÃO EMPREENDEDORA.mp4" type="video/mp4">
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </section>
+
+          <section id="problem_solution">
+            <h2>Problema & Solução</h2>
+            <div id="description">
+              <h3>Problema:</h3>
+              <p class="text">No cenário atual dos cuidados médicos, a precisão diagnóstica muitas vezes é limitada pela falta de informações detalhadas e contínuas sobre a saúde dos pacientes. Isto influencia em maior tempo até chegar a um diagnóstico e consequentemente, menos eficiência em todo sistema hospitalar. <br><br> A ausência de monitoramento em tempo real e a dificuldade em captar dados de longo prazo afetam também a capacidade de oferecer diagnósticos mais rápidos e efetivos para quadros em que é necessário analisar padrões comportamentais do paciente.
+              </p>
+              <h3>Solução:</h3>
+              <p class="text">Integrar os dados provenientes de smartwatches ao sistema interno da empresa. Essa integração permitiria a coleta contínua de informações sobre a saúde dos pacientes, fornecendo um panorama detalhado e em tempo real do seu bem-estar.</p>
+              <h3>Áreas de atuação:</h3>
+              <div id="solution-cards">
+                <div class="card">
+                    <i class="bi bi-eye"></i>
+                    <h4>Monitoramento contínuo da saúde</h4>
+                </div>
+                <div class="card">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <h4>Diagnósticos mais precisos</h4>
+                </div>
+                <div class="card">
+                    <i class="bi bi-laptop"></i>
+                    <h4>Telemedicina aprimorada</h4>
+                </div>
+                <div class="card">
+                    <i class="bi bi-robot"></i>
+                    <h4>Uso da Inteligência Artificial</h4>
+                </div>
+              </div>
+              <img src="./images/graph.png" alt="smartwatch-graph">
+            </div>
+          </section>
+
+          <section id="demo">
+            <h2>Simulador de Sitema de Verificação (bpm)</h2>      
+            <video width="640" height="360" controls>
+              <source src="./videos/Simulador - Python.mp4" type="video/mp4">
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <p>Considerando que ainda não possuo conhecimentos o suficiente para a criação da integração em si, deixo aqui um vídeo de uma aplicação em python criada para a Global Solution.</p>
+          </section>
+
+          <section id="contact">
+            <div id="contact-left">
+              <h2>Seja avisado quando o SmartHealth Connect for lançado</h2>
+              <form id="contact-form">
+                <div class="text-field">
+                    <fieldset>
+                        <input type="text" id="name" placeholder="Digite o seu nome completo" required>
+                        <legend>
+                            <span>Nome</span>
+                        </legend>
+                    </fieldset>
+                    <fieldset>
+                      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+                      <legend>
+                          <span>E-mail</span>
+                      </legend>
+                    </fieldset>
+                </div>
+                <button type="button" class="default" onclick="sendMe()">Avise-me</button>
+              </form>
+            </div>
+            <div id="contact-right">
+              <img alt="contact-img" src="./images/contact.svg">
+            </div>
+          </section>
+
+          <section id="contact-infos">
+            <div id="name_photo">
+                <h2>Membros do Grupo</h2>
+                <table>
+                <tr>
+                    <td><img src="./images/profile-pic.jpg" alt="website author"></td>
+                    <td>Danillo de Sales Vieira - RM552980</td>
+                </tr>
+            </table>
+            </div>
+            <div id="icons">
+                <a href="https://www.linkedin.com/in/danillo-de-sales-vieira" target="_blank">
+                    <i class="bi bi-linkedin icon_footer"></i>
+                </a>
+                <a href="https://github.com/danillosales" target="_blank">
+                    <i class="bi bi-github icon_footer"></i> 
+                </a>
+                <a href="mailto:danillodesalesvieira@gmail.com" target="_blank">
+                    <i class="bi bi-envelope-arrow-up-fill icon_footer"></i>
+                </a>
+            </div>
+          </section>         
+    </main>
+    <script src="./script.js"></script>
+    <footer>
+        <p> © Danillo de Sales Vieira - Todos os direitos reservados - 2023</p>
+    </footer>
+</body>
+</html>
